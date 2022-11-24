@@ -37,9 +37,9 @@ public class Aluno {
 	private String complemento;
 	@NotBlank(message = "A categoria é um atributo requerido.")
 	private String categoria;
-	private String modalEsporte;
+	
 
-	public Aluno(String nome, String dataNascimento, String sexo, String cpf, String cep, String complemento, String categoria, String modalEsporte) {
+	public Aluno(String nome, String dataNascimento, String sexo, String cpf, String cep, String complemento, String categoria) {
 		this.nome = nome;
 		setDataNascimento(dataNascimento);
 		setDataCadastro(new DateTime());
@@ -48,7 +48,6 @@ public class Aluno {
 		this.cep = cep;
 		this.complemento = complemento;
 		this.categoria = categoria;
-		this.modalEsporte = modalEsporte;
 	}
 
 	public Aluno() {
@@ -138,14 +137,6 @@ public class Aluno {
 		this.categoria = categoria;
 	}
 	
-	public String getModalEsporte() {
-		return modalEsporte;
-	}
-
-	public void setaModalEsporte(String modalEsporte) {
-		this.modalEsporte = modalEsporte;
-	}
-
 	public boolean validaData(String data) {
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 		df.setLenient(false); //

@@ -1,4 +1,3 @@
-
 package com.fatec.grupo4.services;
 
 import java.util.List;
@@ -80,7 +79,7 @@ public class MantemAtletaI<generated> implements MantemAtleta {
 		Endereco endereco = obtemEndereco(atleta.getCep());
 		if (umAtleta.isPresent() & endereco != null); {
 			Atleta atletaModificado = new Atleta(atleta.getNome(), atleta.getDataNascimento(), atleta.getSexo(),
-					atleta.getCpf(), atleta.getCep(), atleta.getComplemento(), atleta.getCategoria1());
+					atleta.getCpf(), atleta.getCep(), atleta.getComplemento(), atleta.getCategoria1(), atleta.getModalEsporte());
 			atletaModificado.setId(atleta.getId());
 			atletaModificado.obtemDataAtual(new DateTime());
 			atletaModificado.setEndereco(endereco.getLogradouro());

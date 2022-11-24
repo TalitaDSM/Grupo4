@@ -11,4 +11,3 @@ public interface AtletaRepository extends JpaRepository<Atleta, Long> {
 
 	List<Atleta> findAllByNomeIgnoreCaseContaining(String nome);
 }
-

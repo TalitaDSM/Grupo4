@@ -35,7 +35,7 @@ public class GUIFornecedorController {
 	@GetMapping("/fornecedor")
 	public ModelAndView retornaFormDeCadastroDe(Fornecedor fornecedor) {
 		ModelAndView mv = new ModelAndView("cadastrarFornecedor");
-		List<String> lista = Arrays.asList("Gestão", "Filiado", "Outros");
+		List<String> lista = Arrays.asList("Roupas", "Canecas", "Chaveiros", "Bandeiras", "Outros");
 		mv.addObject("lista", lista);
 		mv.addObject("Fornecedor", fornecedor);
 		return mv;
@@ -44,7 +44,7 @@ public class GUIFornecedorController {
 	@GetMapping("/fornecedores/{cnpj}") // diz ao metodo que ira responder a uma requisicao do tipo get
 	public ModelAndView retornaFormParaEditarFornecedor(@PathVariable("cnpj") String cnpj) {
 		ModelAndView mv = new ModelAndView("atualizarFornecedor");
-		List<String> lista = Arrays.asList("Gestão", "Filiado", "Outros");
+		List<String> lista = Arrays.asList("Roupas", "Canecas", "Chaveiros", "Bandeiras", "Outros");
 		mv.addObject("lista", lista);
 		Optional<Fornecedor> fornecedor = servico.consultaPorCnpj(cnpj);
 		if (fornecedor.isPresent()) {
@@ -68,7 +68,7 @@ public class GUIFornecedorController {
 	public ModelAndView save(@Valid Fornecedor fornecedor, BindingResult result) {
 		ModelAndView mv = new ModelAndView("consultarFornecedor");
 		if (result.hasErrors()) {
-			List<String> lista = Arrays.asList("Gestão", "Filiado", "Outros");
+			List<String> lista = Arrays.asList("Roupas", "Canecas", "Chaveiros", "Bandeiras", "Outros");
 			mv.addObject("lista", lista);
 			mv.setViewName("cadastrarFornecedor");
 		} else {

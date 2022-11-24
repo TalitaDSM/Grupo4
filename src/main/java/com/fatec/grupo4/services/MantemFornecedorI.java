@@ -92,7 +92,7 @@ public class MantemFornecedorI implements MantemFornecedor {
 			logger.info(">>>>>> consulta CEP erro nao esperado ");
 			return null;
 		} catch (HttpClientErrorException e) {
-			logger.info(">>>>>> consulta CEP inválido erro HttpClientErrorException =>" + e.getMessage());
+			logger.info(">>>>>> consulta CEP inv lido erro HttpClientErrorException =>" + e.getMessage());
 			return null;
 		}
 	}

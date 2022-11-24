@@ -7,7 +7,7 @@
 	<title>Cadastrar Modalidades Esportivas</title>
 	<script type="text/javascript">
 		function consulta() {
-			window.open("/grupox/modalidades");
+			window.open("/grupo4/modalidades");
 		}
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,12 +25,12 @@
 		<div class="card">
 		<div class="card-body">
 		<div class="col-md-8">
-		<form action="#" th:action="@{/grupox/modalidades}" th:object="${modalidade}" method="post">
+		<form action="#" th:action="@{/grupo4/modalidades}" th:object="${modalidade}" method="post">
 			<div class="row">
 				<div class="form-group col-md-8">
 				<b><label>Dados Gerais</label></b>
 								<br/>
-					<label for="nome" class="col-form-label">Nome da Modalidade</label>
+					<label for="nome" class="col-form-label">Nome da Modalidade/Esporte</label>
 					<input type="text" th:field="*{nome}" class="form-control" id="nome" name="nome" placeholder="">
 					<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger">
 					</span>
@@ -45,10 +45,9 @@
 						<label> Masculino </label>
 						<input type="radio" th:field="*{sexo}" name="sexo" id="sexo" value="F" checked>
 						<label> Feminino </label>
-						<span th:if="${#fields.hasErrors('sexo')}" th:errors="*{sexo}" class="text-danger">
-							<label> Unissex </label>
-							<input type="radio" th:field="*{sexo}" name="sexo" id="sexo" value="U">
-						</span>
+						<input type="radio" th:field="*{sexo}" name="sexo" id="sexo" value="U">
+						<label> Unissex </label>
+						<span th:if="${#fields.hasErrors('sexo')}" th:errors="*{sexo}" class="text-danger"></span>
 					</div>
 				</div>
 

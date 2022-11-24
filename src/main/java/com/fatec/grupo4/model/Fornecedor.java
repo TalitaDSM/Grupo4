@@ -114,7 +114,7 @@ public class Fornecedor {
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 		df.setLenient(false); //
 		try {
-			df.parse(data); // data v�lida (exemplo 30 fev - 31 nov)
+			df.parse(data); // data v lida (exemplo 30 fev - 31 nov)
 			return true;
 		} catch (ParseException ex) {
 			return false;

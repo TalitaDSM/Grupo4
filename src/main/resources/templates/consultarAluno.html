@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -28,7 +27,7 @@
 	<div class="panel panel-default" style="margin: 10px">
 		<div class="row">	
 			<div class="form-group col-md-8">
-				<input type="button" class="btn btn-primary" value="Cadastrar Cliente"
+				<input type="button" class="btn btn-primary" value="Cadastrar Aluno"
 										onclick="cadastrar();">
 			</div>
 		</div>
@@ -45,23 +44,22 @@
 					<thead>
 						<tr>
 							<th>ID</th>
-							<th>CPF</th>
 							<th>Nome Completo</th>
+							<th>CPF</th>							
 							<th>Data Nascimento</th>
 							<th>CEP</th>
 							<th>Endereço</th>
 							<th>Complemento</th>
 							<th>Data Cadastro</th>
 							<th>Categoria</th>
-							<th>Esporte</th>
 							
 						</tr>
 					</thead>
 					<tbody>
 						<tr th:each="aluno : ${alunos}">
-							<td th:text="${aluno.id}"></td>
-							<td th:text="${aluno.cpf}"></td>
+							<td th:text="${aluno.id}"></td>							
 							<td th:text="${aluno.nome}"></td>
+							<td th:text="${aluno.cpf}"></td>
 							<td th:text="${aluno.dataNascimento}"></td>
 							<td th:text="${aluno.cep}"></td>
 							<td th:text="${aluno.endereco}"></td>
