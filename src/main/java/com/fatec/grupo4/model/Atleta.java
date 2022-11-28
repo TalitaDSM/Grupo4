@@ -37,6 +37,7 @@ public class Atleta {
 	private String complemento;
 	@NotBlank(message = "A categoria é um atributo requerido.")
 	private String categoria;
+	@NotBlank(message = "O esporte é um atributo requerido.")
 	private String modalEsporte;
 
 	public Atleta(String nome, String dataNascimento, String sexo, String cpf, String cep, String complemento, String categoria , String modalEsporte) {
@@ -169,6 +170,11 @@ public class Atleta {
 	}
 
 	public void setCategoria(Object categoria2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setModalEsporte(String modalEsporte2) {
 		// TODO Auto-generated method stub
 		
 	}

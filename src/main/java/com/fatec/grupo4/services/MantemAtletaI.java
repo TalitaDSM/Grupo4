@@ -84,6 +84,7 @@ public class MantemAtletaI<generated> implements MantemAtleta {
 			atletaModificado.obtemDataAtual(new DateTime());
 			atletaModificado.setEndereco(endereco.getLogradouro());
 			atletaModificado.setCategoria(atleta.getCategoria());
+			atletaModificado.setModalEsporte(atleta.getModalEsporte());
 			logger.info(">>>>>> 2. servico altera atleta cep valido para o id => " + atletaModificado.getId());
 			return Optional.ofNullable(repository.save(atletaModificado));
 		}
